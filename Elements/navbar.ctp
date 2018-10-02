@@ -63,12 +63,22 @@
 	<div class="nav-bottom">
 		<div id="nav-admin-buttons" class="nav-link" style="display: none">
 			<?php if(!$isConnected): ?>
-			<a href="#login" data-toggle="modal" class="right nav-link">
-				<?= $Lang->get('USER__LOGIN') ?> <i aria-hidden="true" class="fa fa-sign-in"></i>
-			</a>
-			<a href="#register" data-toggle="modal" class="right nav-link">
-				<?= $Lang->get('USER__REGISTER') ?> <i aria-hidden="true" class="fa fa-user-plus"></i>
-			</a>
+				<?php if($EyPlugin->isInstalled('phpierre.signinup')) { ?>
+					<a href="/login" class="right nav-link">
+						<?= $Lang->get('USER__LOGIN') ?> <i aria-hidden="true" class="fa fa-sign-in"></i>
+					</a>
+					<a href="/register" class="right nav-link">
+						<?= $Lang->get('USER__REGISTER') ?> <i aria-hidden="true" class="fa fa-user-plus"></i>
+					</a>
+				<?php } else { ?>
+					<a href="#login" data-toggle="modal" class="right nav-link">
+						<?= $Lang->get('USER__LOGIN') ?> <i aria-hidden="true" class="fa fa-sign-in"></i>
+					</a>
+					<a href="#register" data-toggle="modal" class="right nav-link">
+						<?= $Lang->get('USER__REGISTER') ?> <i aria-hidden="true" class="fa fa-user-plus"></i>
+					</a>
+				<?php } ?>
+			
 			<?php else: ?>
 			<?php if($Permissions->can('ACCESS_DASHBOARD')): ?>
 			<a class="right nav-link"

@@ -150,10 +150,10 @@
             <span style="color:white">
 				Copyright &copy; <?php echo date('Y');?>
 				<a href=""><?= $website_name ?></a> -
-				Thème créé par <a href="https://light-craft.fr/futile" target="_blank">nivcoo</a>, <a href="https://light-craft.fr/0ddlyoko" target="_blank">0ddlyoko</a>
+				Thème créé par <a href="" target="_blank">nivcoo</a>, <a href="" target="_blank">0ddlyoko</a>
 			</span>
 		<span style="float: right; margin-right:50px; color:white">
-				Propulsé par <a href="http://mineweb.org" target="_BLANK">MineWeb</a>
+				Propulsé par <a href="https://mineweb.org/" target="_BLANK">MineWeb</a>
 			</span>
 	</div>
 </section>

@@ -8,6 +8,21 @@
     background-color: #337ab7;
     border-color: #337ab7;
 }
+.button-reg {
+    position: absolute;
+    top: -50px;
+    width: 100px;
+    border-radius: 0px;
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+.button-reg-2 {
+    text-align:center;
+    width: 100%;
+    border-radius: 0px;
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
 .button-insc{
     position: absolute;
     top: 0;
@@ -204,21 +219,42 @@
 							?>
 						</div>
 					</div>
+					<div class="col-sm-10">
+						<input type="text" style="border-radius:0px" class="form-control" name="captcha" id="inputPassword3" placeholder="<?= $Lang->get('FORM__CAPTCHA_LABEL') ?>">
+					</div>
+					<?php } ?>
+					<?php if (!empty($condition)) { ?>
+					  <br><div class="col-sm-10">
+						<div class="checkbox">
+							<label>
+								<input type="checkbox" name="condition">
+								<?=$Lang->get('USER__CONDITION_1')?> <a href="<?= $condition ?>"> <?= $Lang->get('USER__CONDITION_2')?></a>
+							</label>
+						</div>
+					  </div>
+					 
 					<div class="form-group">
-						<label class="col-sm-2 control-label"></label>
 						<div class="col-sm-10">
-							<input style="border-radius:0px" type="text" class="form-control" name="captcha" id="inputPassword3" placeholder="<?= $Lang->get('FORM__CAPTCHA_LABEL') ?>">
 							<div style="border:none" class="modal-footer">
-								<button type="submit" class="btn button-insc btn-primary"><?= $Lang->get('USER__REGISTER') ?></button>
+								 <button type="submit" class="btn button-reg btn-primary"><?= $Lang->get('USER__REGISTER') ?></button>
+							</div>
+						</div>
+					</div>
+					<?php } else { ?>
+					<div class="form-group">
+						<div class="col-sm-10">
+							<div style="border:none" class="modal-footer">
+								 <button type="submit" class="btn button-reg-2 btn-primary"><?= $Lang->get('USER__REGISTER') ?></button>
+							</div>
+						</div>
+					</div>
+					<?php } ?>
+					
 				</form>
 			</div>
+
 		</div>
 	</div>
-	<?php } ?>
-</div>
-
-</div>
-</div>
 </div>
 
 <script type="text/javascript">
