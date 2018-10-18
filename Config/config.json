@@ -6,7 +6,7 @@
    "apiID":117,
    "slider":false,
    "configurations":{
-      "favicon_url":""
+      "favicon_url":"",
       "accueil":{  
          "ip":"play.mineweb.fr",
          "slider":""
