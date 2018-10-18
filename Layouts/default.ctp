@@ -8,7 +8,7 @@
 	<meta name="author" content="">
 	<meta name="keywords" content="">
 	<title><?= $title_for_layout; ?> - <?= $website_name ?></title>
-	<link rel="icon" type="image/png" href="<?= $theme_config['accueil']->favicon ?>" />
+	<link rel="icon" type="image/png" href="<?= $theme_config['favicon_url'] ?>" />
 	<!-- CSS -->
 	<?= $this->Html->css('style.css'); ?>
 	<?= $this->Html->css('nav.css'); ?>
