@@ -90,19 +90,17 @@
 			</div>
 			<div style="text-align:center" class="stats-title">
 				<div class="fa fa-angle-double-right"></div>
-				Visites : <a><?= $count_visits = ClassRegistry::init('Visit')->getVisitsCount(); ?></a>
+				Visites : <a><?= $visits_count ?></a>
 				<div class="fa fa-angle-double-left"></div>
 			</div>
 			<div style="text-align:center" class="stats-title">
 				<div class="fa fa-angle-double-right"></div>
-				Inscriptions :<a> <?= ClassRegistry::init('Users')->find('count') ?></a>
+				Inscriptions :<a> <?= $users_count ?></a>
 				<div class="fa fa-angle-double-left"></div>
 			</div>
 			<div style="text-align:center" class="stats-title">
 				<div class="fa fa-angle-double-right"></div>
-				Dernier inscrit :<a> <?php $userLast = ClassRegistry::init('Users')->find('first', array('order' =>
-				'created DESC'));
-				echo $userLast['Users']['pseudo'] ?></a>
+				Dernier inscrit :<a> <?= $users_last['pseudo'] ?></a>
 				<div class="fa fa-angle-double-left"></div>
 			</div>
 		</div>

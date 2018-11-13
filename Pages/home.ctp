@@ -116,16 +116,7 @@
 		?>
 		<div class="col-md-12">
 			<div class="panel-default">
-				<?php
-                        $msg = $v['News']['content'];
-                        $nmsg = substr($msg, 0, -1);
-                        if(strlen($msg) > $theme_config['news_split'] && $theme_config['news_split'] > -1):$nmsg .=
-				"..."; endif;
-				$doc = new DOMDocument();
-				$doc->loadHTML($nmsg);
-				$nmsg = $doc->saveHTML();
-				echo $nmsg;
-				?>
+				<?= $v['News']['content']; ?>
 				<br>
 				<a style="color:#337ab7;"
 				   href="<?= $this->Html->url(array('controller' => 'blog', 'action' => $v['News']['slug'])) ?>">
